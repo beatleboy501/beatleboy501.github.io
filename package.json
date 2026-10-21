@@ -1,17 +1,21 @@
 {
   "name": "andrewallison-llc",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "node_modules/next/dist/bin/next",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "next build --webpack",
+    "buildNormal": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "greet": "echo 'Hello, World!'"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "lucide-react": "^1.54.0",
     "next": "16.4.0",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -20,7 +24,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }
